@@ -4,27 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>梦讫</title>
+  <title>LabView编程 | 梦讫</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: LabView编程date: 2016-01-20
-tags: LabviewLabview有以下重要的概念
+  <meta name="description" content="Labview有以下重要的概念
 . subvi. dll. proterty node. reference. shift register. array. queue. buffer
-其中array是数据的常用组织方式, queue则是很重要的数据和任务同步工具, Queue可以用来实现堆栈的功能，因此q">
+其中array是数据的常用组织方式, queue则是很重要的数据和任务同步工具, Queue可以用来实现堆栈的功能，因此queue被放在了同步的函数选板中。队列中数据分为前端后后端，前端为旧数据，后端是新数据。常用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="梦讫">
+<meta property="og:title" content="LabView编程">
 <meta property="og:url" content="http://yoursite.com/2016/01/20/practice/nature/code-labview/HowToLabview/index.html">
 <meta property="og:site_name" content="梦讫">
-<meta property="og:description" content="title: LabView编程date: 2016-01-20
-tags: LabviewLabview有以下重要的概念
+<meta property="og:description" content="Labview有以下重要的概念
 . subvi. dll. proterty node. reference. shift register. array. queue. buffer
-其中array是数据的常用组织方式, queue则是很重要的数据和任务同步工具, Queue可以用来实现堆栈的功能，因此q">
-<meta property="og:updated_time" content="2016-01-20T18:47:39.000Z">
+其中array是数据的常用组织方式, queue则是很重要的数据和任务同步工具, Queue可以用来实现堆栈的功能，因此queue被放在了同步的函数选板中。队列中数据分为前端后后端，前端为旧数据，后端是新数据。常用">
+<meta property="og:updated_time" content="2016-01-20T18:49:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梦讫">
-<meta name="twitter:description" content="title: LabView编程date: 2016-01-20
-tags: LabviewLabview有以下重要的概念
+<meta name="twitter:title" content="LabView编程">
+<meta name="twitter:description" content="Labview有以下重要的概念
 . subvi. dll. proterty node. reference. shift register. array. queue. buffer
-其中array是数据的常用组织方式, queue则是很重要的数据和任务同步工具, Queue可以用来实现堆栈的功能，因此q">
+其中array是数据的常用组织方式, queue则是很重要的数据和任务同步工具, Queue可以用来实现堆栈的功能，因此queue被放在了同步的函数选板中。队列中数据分为前端后后端，前端为旧数据，后端是新数据。常用">
   
     <link rel="alternative" href="/atom.xml" title="梦讫" type="application/atom+xml">
   
@@ -124,7 +121,7 @@ tags: LabviewLabview有以下重要的概念
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/科研/" style="font-size: 10px;">科研</a>
+						<a href="/tags/Labview/" style="font-size: 10px;">Labview</a> <a href="/tags/科研/" style="font-size: 20px;">科研</a>
 					</div>
 				</section>
 				
@@ -210,7 +207,7 @@ tags: LabviewLabview有以下重要的概念
   
     <div class="article-meta">
       <a href="/2016/01/20/practice/nature/code-labview/HowToLabview/" class="article-date">
-  	<time datetime="2016-01-20T18:47:39.000Z" itemprop="datePublished">2016-01-20</time>
+  	<time datetime="2016-01-20T00:00:00.000Z" itemprop="datePublished">2016-01-20</time>
 </a>
     </div>
   
@@ -219,10 +216,31 @@ tags: LabviewLabview有以下重要的概念
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LabView编程
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Labview/">Labview</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: LabView编程<br>date: 2016-01-20</p>
-<h1 id="tags_3A_Labview"><a href="#tags_3A_Labview" class="headerlink" title="tags: Labview"></a>tags: Labview</h1><p>Labview有以下重要的概念</p>
+        <p>Labview有以下重要的概念</p>
 <p>. subvi<br>. dll<br>. proterty node<br>. reference<br>. shift register<br>. array<br>. queue<br>. buffer</p>
 <p>其中array是数据的常用组织方式, queue则是很重要的数据和任务同步工具, Queue可以用来实现堆栈的功能，因此queue被放在了同步的函数选板中。队列中数据分为前端后后端，前端为旧数据，后端是新数据。<br>常用的队列函数有五个：获取queue引用 Obtain queue，元素入队列enqueue element，元素出队列Dequeue element, 清空队列flush queue和释放队列引用release queue。其中获取队列引用是，有一个最大长度的选项，该选项如果为-1则队列会不断增长，需要手动协调速度，而设定最大长度后，队列满后新元素会之一等待直到有空位为止；在元素入队列的设定中，有一个选项叫做超时timeout,该选项对应于有最大队列长度，如果新元素在等待设定时间后仍然无法入队列，则结束本次等待，等待超时的新元素会被丢弃。元素出队列时需要注意，队列是先入先出FIFO，前端元素出队列之后，该元素会被删除。<br>另外还有两个操作函数：队列最前端插入元素Enqueue element at opposite end，有损耗元素入队列lossy enqueue element，前者是是先入后出功能FIFO，可以实现堆栈功能。后者是自动删除前端元素，在末端插入元素，可以实现缓冲区buffer功能(chart图便是缓冲区技术实现的)。<br>最后两个功能是查询功能，获取队列状态get queue status和预览队列元素preview queue element，预览的功能不会删除前端元素。</p>
 <p>因此如果在两个循环之间同步数据和任务时，队列是非常好的工具，如同使用堆栈一样，内存回收非常方便，同时其运行效率远高于数组。</p>
@@ -277,7 +295,7 @@ tags: LabviewLabview有以下重要的概念
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="practice/nature/code-labview/HowToLabview" data-title="" data-url="http://yoursite.com/2016/01/20/practice/nature/code-labview/HowToLabview/"></div>
+	<div class="ds-thread" data-thread-key="practice/nature/code-labview/HowToLabview" data-title="LabView编程" data-url="http://yoursite.com/2016/01/20/practice/nature/code-labview/HowToLabview/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
