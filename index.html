@@ -198,10 +198,61 @@
 
       <div class="body-wrap">
   
-    <article id="post-practice/nature/HowToResearch3" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-practice/nature/code-labview/HowToLabview" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/16/practice/nature/HowToResearch3/" class="article-date">
+      <a href="/2016/01/20/practice/nature/code-labview/HowToLabview/" class="article-date">
+  	<time datetime="2016-01-20T18:47:39.000Z" itemprop="datePublished">2016-01-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: LabView编程<br>date: 2016-01-20</p>
+<h1 id="tags_3A_Labview"><a href="#tags_3A_Labview" class="headerlink" title="tags: Labview"></a>tags: Labview</h1><p>Labview有以下重要的概念</p>
+<p>. subvi<br>. dll<br>. proterty node<br>. reference<br>. shift register<br>. array<br>. queue<br>. buffer</p>
+<p>其中array是数据的常用组织方式, queue则是很重要的数据和任务同步工具, Queue可以用来实现堆栈的功能，因此queue被放在了同步的函数选板中。队列中数据分为前端后后端，前端为旧数据，后端是新数据。<br>常用的队列函数有五个：获取queue引用 Obtain queue，元素入队列enqueue element，元素出队列Dequeue element, 清空队列flush queue和释放队列引用release queue。其中获取队列引用是，有一个最大长度的选项，该选项如果为-1则队列会不断增长，需要手动协调速度，而设定最大长度后，队列满后新元素会之一等待直到有空位为止；在元素入队列的设定中，有一个选项叫做超时timeout,该选项对应于有最大队列长度，如果新元素在等待设定时间后仍然无法入队列，则结束本次等待，等待超时的新元素会被丢弃。元素出队列时需要注意，队列是先入先出FIFO，前端元素出队列之后，该元素会被删除。<br>另外还有两个操作函数：队列最前端插入元素Enqueue element at opposite end，有损耗元素入队列lossy enqueue element，前者是是先入后出功能FIFO，可以实现堆栈功能。后者是自动删除前端元素，在末端插入元素，可以实现缓冲区buffer功能(chart图便是缓冲区技术实现的)。<br>最后两个功能是查询功能，获取队列状态get queue status和预览队列元素preview queue element，预览的功能不会删除前端元素。</p>
+<p>因此如果在两个循环之间同步数据和任务时，队列是非常好的工具，如同使用堆栈一样，内存回收非常方便，同时其运行效率远高于数组。</p>
+<p>某些情况如果用数组，需要手动释放内存。方法有：</p>
+<ol>
+<li>使用固定长度数组，预估所需数组长度，新建并初始化，在使用时只需要利用循环次数i对数组长度求余数作为索引以便循环replace即可。</li>
+<li>利用数组实现队列功能。</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-practice/nature/research/HowToResearch3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/16/practice/nature/research/HowToResearch3/" class="article-date">
   	<time datetime="2016-01-16T11:42:54.000Z" itemprop="datePublished">2016-01-16</time>
 </a>
     </div>
@@ -215,7 +266,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/16/practice/nature/HowToResearch3/">九阳神功之三：布里渊理论预研1</a>
+      <a class="article-title" href="/2016/01/16/practice/nature/research/HowToResearch3/">九阳神功之三：布里渊理论预研1</a>
     </h1>
   
 
@@ -273,10 +324,10 @@
 
 
   
-    <article id="post-practice/nature/HowToResearch2" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-practice/nature/research/HowToResearch2" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/15/practice/nature/HowToResearch2/" class="article-date">
+      <a href="/2016/01/15/practice/nature/research/HowToResearch2/" class="article-date">
   	<time datetime="2016-01-15T21:24:27.000Z" itemprop="datePublished">2016-01-15</time>
 </a>
     </div>
@@ -290,7 +341,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/15/practice/nature/HowToResearch2/">九阳神功之二：工作规划</a>
+      <a class="article-title" href="/2016/01/15/practice/nature/research/HowToResearch2/">九阳神功之二：工作规划</a>
     </h1>
   
 
@@ -411,10 +462,10 @@
 
 
   
-    <article id="post-practice/nature/HowToResearch" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-practice/nature/research/HowToResearch" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/10/practice/nature/HowToResearch/" class="article-date">
+      <a href="/2016/01/10/practice/nature/research/HowToResearch/" class="article-date">
   	<time datetime="2016-01-10T13:39:51.000Z" itemprop="datePublished">2016-01-10</time>
 </a>
     </div>
@@ -428,7 +479,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/10/practice/nature/HowToResearch/">九阳神功之一：前言</a>
+      <a class="article-title" href="/2016/01/10/practice/nature/research/HowToResearch/">九阳神功之一：前言</a>
     </h1>
   
 
