@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>九阳神功之五：布里渊预研SAW数值模拟 | 梦讫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="SAW Gas Sensor
+Introduction
+A surface acoustic wave(SAW) is an acoustic wave propagating along the surface of a solid meterial.Its amplitude decays rapidly, often exponentially, with the depth of the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="九阳神功之五：布里渊预研SAW数值模拟">
+<meta property="og:url" content="http://yoursite.com/2016/01/26/practice/nature/research/HowToResearch5/index.html">
+<meta property="og:site_name" content="梦讫">
+<meta property="og:description" content="SAW Gas Sensor
+Introduction
+A surface acoustic wave(SAW) is an acoustic wave propagating along the surface of a solid meterial.Its amplitude decays rapidly, often exponentially, with the depth of the">
+<meta property="og:updated_time" content="2016-01-27T02:22:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="九阳神功之五：布里渊预研SAW数值模拟">
+<meta name="twitter:description" content="SAW Gas Sensor
+Introduction
+A surface acoustic wave(SAW) is an acoustic wave propagating along the surface of a solid meterial.Its amplitude decays rapidly, often exponentially, with the depth of the">
+  
+    <link rel="alternative" href="/atom.xml" title="梦讫" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Snail</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>標籤</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>關於</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/categories/R-D">科技</a></li>
+				        
+							<li><a href="/categories/social">社交</a></li>
+				        
+							<li><a href="/categories/finance">金融</a></li>
+				        
+							<li><a href="/categories/know">知识</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Labview/" style="font-size: 10px;">Labview</a> <a href="/tags/科研/" style="font-size: 20px;">科研</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Snail</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Snail</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/categories/R-D">科技</a></li>
+		        
+					<li><a href="/categories/social">社交</a></li>
+		        
+					<li><a href="/categories/finance">金融</a></li>
+		        
+					<li><a href="/categories/know">知识</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-practice/nature/research/HowToResearch5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/26/practice/nature/research/HowToResearch5/" class="article-date">
+  	<time datetime="2016-01-26T23:56:40.000Z" itemprop="datePublished">2016-01-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      九阳神功之五：布里渊预研SAW数值模拟
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>SAW Gas Sensor</p>
+<p>Introduction</p>
+<p>A surface acoustic wave(SAW) is an acoustic wave propagating along the surface of a solid meterial.Its amplitude decays rapidly, often exponentially, with the depth of the material. SAWs are featured in many kinds of electronic components, including filters, oscillators, and sensors. SAW devices typically use electrodes on a piezoelectric material to convert an electric signal to a SAW, and back again.</p>
+<p>In this model, you investigate the resonance frequencies of a SAW gas sensor. The sensor consists of an interdigitated transducer(IDT) etched onto a piezoelectric LiNbO<em>3</em>(lithium niobate) substrate and covered with a thin polyisobutylene(PIB) film. The mass of the PIB film increase as PIB selectively adsorbs CH_2_Cl<em>2</em> (dichloromethane, DCM) from air. This causes ashift in resonance which slightly lowers the resonance frequency for the same SAW mode.</p>
+<p>表面声波是在固体表面传播的声波。其强度随着深度指数衰减。表面声波可以用来实现很多电学器件，如滤波器、振荡器和传感器。声表面波器件通常在PZT材料表面制备电极以实现电信号和表面声波的互相转换。</p>
+<p>在这个模型中，你主要研究表面声波气体传感器的谐振频率。传感器主要包括在LiNbO<em>3</em>基底的PZT，在PZT表面所腐蚀的叉指换能器（IDT）和上面覆盖的PIB薄膜。当PIB有选择的吸收空气中的CH2Cl2时，其薄膜质量会增加。这就会导致谐振腔的峰位稍微变小。</p>
+<p>IDT used in SAW devices may have hundreds of identical electrodes, and each electrode can be about 100 times longer than it is wide. You can therefore neglect the edge effect and reduce the model geometry to the periodic unit celll shown in Figure 2. The height of this cell does does not have to extend all the way to the bottom of the substrate but only a few wavelength down, so that the SAW has almost died out at the lower boundary.</p>
+<p>SAW器件中的IDT往往有数百个电极，每一个电极的长度大概有宽度的100倍以上。因此可以忽略边界效应，将模型简化为fig2中所示的周期单元。并且单元的高度也不需要扩展到实际底边，只需要波长的数倍，表面波在这个深度已经基本上衰减为0了。</p>
+<p>Set up the model using the predefined Piezoelectric Devices multiphysics interface. In 2D, a Plane Strain assumption is used for the Solid Mechanics physics. Hence the out-of-plane strain component is zero. This should be a valid assumption, considering that the SAW is generated in the plane of the model and hence any variation in the out-of-plane direction can be cosidered minimal.</p>
+<p>利用已经定义好的PZT器件多物理场界面加以设置。在2D模型中，固体物理采用平面应力假设。因此其法向应力分量为0。考虑到SAW在平面内产生，平面法向分量非常小，该假设基本符合实际情况。</p>
+<p>Boundary Conditions</p>
+<p>In order to define the model, you need to apply structural and electrical boundary conditions.</p>
+<p>As one can assume that the surface wave dies off within two to three wavelengths from the surface, the lower boundary is fixed. This enforces a zero structural displacement but does not contribute to any significant reflection from the lower boundary back into the bulk of the substrate as long as we are observing surface waves and in particular Rayleigh waves.</p>
+<p>为了定义模型，你需要加载结构和电学边界条件。</p>
+<p>由于我们可以假设表面波在界面下两到三倍波长深度内就衰减为0,因此下边界条件就可以确定了。其结构位移为0，且在我们观察表面特别是瑞利波时不会有任何明显的反射贡献。</p>
+<p>The electrodes have a much higher electrical conductivity compared to PIB and LiNbO<em>3</em>. Hence, one can expect each of the electrodes to be isopotential. This is why you do not need to model the domains that constitute the electrodes but can simply use appropriate boundary conditions on all the outer boundaries of each electrodes to indicate what type of isopotential state it is in. The boundaries of the left terminal is set to electrical ground, and those of the right terminal are assigned to a Floating Potential with zero surface charge accumulation. This combination of electrical boundary conditions corresponds to an open circuirt configuration, which is typically suitable for sensing applications.</p>
+<p>电极的电导率比PIB和LiNbO<em>3</em>高的多。因此，我们可以认为每一个电极是等电势的。这就是为什么你不需要为电极域进行建模，而只需要为所有的电极使用合适的简化以表明其电势即可。其中左边的电极被设为接地，而右边的电极则为高电势，其中没有表面电荷累计。这种电学边界条件的组合同开放电路配置一致，后者适用于典型的传感应用。</p>
+<p>Use periodic boundary conditions to dictate that the electric potential and displacements are the same along both vertical boundaries of the geometry. When using periodic boundary conditions,one need to ensure that the mesh on the ertical boundaries on the left of the unit cell and the vertical boundries on the right of the unit cell are identical. This is achieved by first creating the mesh on the vertical boundaries on the left and then using the Copy Edge feature to create the exact same mesh on the veritcal boundaries on the right.</p>
+<p>使用周期边界条件来表明左右两边竖直方向的电势和位移都是一致的。尤其是需要保证划分网格的时候两边一致。这主要通过首先在左边竖直方向划分网格，然后使用Copy Edge的功能来在右边实现完全相同的边界条件。</p>
+<p>All other boundaries are left to the default boundary conditions which are Free for Solid Mechanics and Zero Charge for Electrostatics, respectively.</p>
+<p>所有其他的边界条件可以设为默认，其中固体边界条件为自由，而电学边界条件为0电荷。</p>
+<p>The density of the PIB is from Ref.1. The Poisson’s ratio is considered to be 0.48, and the Young’s modulus is set to 10 GPa.</p>
+<p>The adsorption of DCM gas is represented as slight increase of the overall density of the PIB film as shown in the following expression.</p>
+<p>/rho = /rho<em>PIB</em>+switch /time /rho<em>DCM,PIB</em></p>
+<p>In this model, you use a parameter, switch, whose value can be either 0 or 1. This allows to solve the model for two case; once without the effect of adsorbed gas and once with the effect of the adsorbed DCM gas in PIB.</p>
+<p>PIB薄膜的密度可以从Ref.1中获得。泊松系数设为0.48，杨氏模量设为10GPa。<br>DCM气体的吸附主要表现为薄膜密度的轻微增加，通过以下公式计算：</p>
+<p>在本模型中，使用SWITCH参数的0和1来控制两种情况，0表示没有吸附任何气体，而1表示吸附了气体。</p>
+<p>When the sensor is exposed to 100 ppm of DCM in air at atmospheric pressure and room temperature, the “partial density” of DCM in the PIB film can be caculated from<br>/rho<em>DCM,PIB</em> = KMc<br>where K=10^1.4821(Ref.1) is the air/PIB partition coefficient for DCM, M is its molar mass, and c<br>c=(c0p)/(RT)<br>is its concentration in air. The DCM concentration, c in moles/m^3<br>is computed using the Gas Law. Here c<em>0</em> is the concentration in parts per million, p is the pressure, T is the temperature, and R is the gas constant. Any effects of the DCM adsorption on the material properties other than the density are neglected.</p>
+<p>当传感器被暴露在DCM浓度为100ppm的空气中(大气压室温条件)，PIB薄膜中DCM的浓度可以如下公式计算:<br>其中K为DCM在空气/PIB的隔离系数，M是摩尔质量，<br>c是空气中的浓度。DCM的空气浓度单位为mole/m^3，主要利用气体规律来计算。这里c<em>0</em>是每100万单位的浓度，p是压力，T是温度， R是气体常数。任何DCM吸收的非密度效应都被忽略了。</p>
+<p>Most of the material properties and factors affecting them have been parametrized as shown in Table 1. This will easily allow the model to be adapted for other materials and operating conditions.<br>大部分材料的特性和影响因子都在表1中列出。这可以允许模型很容易的适用于其他材料和条件。</p>
+<p>ESTIMATING THE SAW FREQUENCY</p>
+<p>The use of periodic boundary condition implies that the frequencies of interest will correspond to wavelengths that are integer fractions of the width of the geometry. The lowest SAW eigenmode has its wavelength equal to the width of the geometry, i.e. 4 um. Using this along with the Rayleigh wave velocity for the given piezoelectric substrate material, one can find an estimate of the resonance frequency of interest. The information can be used in the eigen frequency solver, which will help it to find out the resonance frequencies close to this estimated number. In this model, you use a YZ-cut LiNbO<em>3</em> whose Rayleigh wave velocity(\nuR) is around 3488 m/s. This gives an estimate of the lowest SAW frequency(f0) to be 872 MHZ.</p>
+<p>使用周期边界条件暗示了我们感兴趣的频率对应的表面波波长为几何宽度的(周期)整分数之一，这里最小的SAW本征模式波长为几何结构的宽度，4um。利用该波长结合PZT材料的瑞利散射声速，我们可以估算出谐振频率，这有利于我们寻找实际的谐振频率点。该模型中瑞利声速为3488 m/s。因此最低频率为872MHz。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/20/practice/nature/code-labview/HowToLabview/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LabView编程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="practice/nature/research/HowToResearch5" data-title="九阳神功之五：布里渊预研SAW数值模拟" data-url="http://yoursite.com/2016/01/26/practice/nature/research/HowToResearch5/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Snail
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
