@@ -11,12 +11,12 @@ Introduction
 A surface acoustic wave(SAW) is an acoustic wave propagating along the surface of a solid meterial.Its amplitude decays rapidly, often exponentially, with the depth of the">
 <meta property="og:type" content="article">
 <meta property="og:title" content="九阳神功之五：布里渊预研SAW数值模拟">
-<meta property="og:url" content="http://yoursite.com/2016/01/26/practice/nature/research/HowToResearch5/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/01/26/HowToResearch5/index.html">
 <meta property="og:site_name" content="梦讫">
 <meta property="og:description" content="SAW Gas Sensor
 Introduction
 A surface acoustic wave(SAW) is an acoustic wave propagating along the surface of a solid meterial.Its amplitude decays rapidly, often exponentially, with the depth of the">
-<meta property="og:updated_time" content="2016-01-27T02:22:44.000Z">
+<meta property="og:updated_time" content="2016-01-28T00:24:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="九阳神功之五：布里渊预研SAW数值模拟">
 <meta name="twitter:description" content="SAW Gas Sensor
@@ -101,13 +101,13 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 				        
 							<li><a href="/archives">所有文章</a></li>
 				        
-							<li><a href="/categories/R-D">科技</a></li>
+							<li><a href="/categories/math">数学</a></li>
 				        
-							<li><a href="/categories/social">社交</a></li>
+							<li><a href="/categories/world">现象</a></li>
 				        
-							<li><a href="/categories/finance">金融</a></li>
+							<li><a href="/categories/model">建模</a></li>
 				        
-							<li><a href="/categories/know">知识</a></li>
+							<li><a href="/categories/code">编程</a></li>
 				        
 						</ul>
 					</nav>
@@ -191,13 +191,13 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
-					<li><a href="/categories/R-D">科技</a></li>
+					<li><a href="/categories/math">数学</a></li>
 		        
-					<li><a href="/categories/social">社交</a></li>
+					<li><a href="/categories/world">现象</a></li>
 		        
-					<li><a href="/categories/finance">金融</a></li>
+					<li><a href="/categories/model">建模</a></li>
 		        
-					<li><a href="/categories/know">知识</a></li>
+					<li><a href="/categories/code">编程</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -219,10 +219,10 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-practice/nature/research/HowToResearch5" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-HowToResearch5" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/26/practice/nature/research/HowToResearch5/" class="article-date">
+      <a href="/2016/01/26/HowToResearch5/" class="article-date">
   	<time datetime="2016-01-26T23:56:40.000Z" itemprop="datePublished">2016-01-26</time>
 </a>
     </div>
@@ -285,6 +285,53 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 <p>ESTIMATING THE SAW FREQUENCY</p>
 <p>The use of periodic boundary condition implies that the frequencies of interest will correspond to wavelengths that are integer fractions of the width of the geometry. The lowest SAW eigenmode has its wavelength equal to the width of the geometry, i.e. 4 um. Using this along with the Rayleigh wave velocity for the given piezoelectric substrate material, one can find an estimate of the resonance frequency of interest. The information can be used in the eigen frequency solver, which will help it to find out the resonance frequencies close to this estimated number. In this model, you use a YZ-cut LiNbO<em>3</em> whose Rayleigh wave velocity(\nuR) is around 3488 m/s. This gives an estimate of the lowest SAW frequency(f0) to be 872 MHZ.</p>
 <p>使用周期边界条件暗示了我们感兴趣的频率对应的表面波波长为几何宽度的(周期)整分数之一，这里最小的SAW本征模式波长为几何结构的宽度，4um。利用该波长结合PZT材料的瑞利散射声速，我们可以估算出谐振频率，这有利于我们寻找实际的谐振频率点。该模型中瑞利声速为3488 m/s。因此最低频率为872MHz。</p>
+<p>Results and Discussion</p>
+<p>The anti-resonance and resource frequencies evaluate to approximately 850 MHz and 855 MHz, respectively. Figure 3 and Figure 4 show the corresponding SAW modes. Figure 5 and Figure 6 show the electric potential distribution characteristics for these solutions.</p>
+<p>Exposing the sensor to a 100 ppm concentration of DCM in air leads to a resonance frequency shift of approximately 200 Hz downwards. This is computed by evaluating the resonance frequency before and after adding the density of adsorbed DCM to that of the PIB domain.</p>
+<p>Note that the computational mesh is identical in both these solution. This implies that the relative error of the frequency shift similar to that of the resonance frequency itself. Thus, the shift is accurately eveluated despite beint a few magnitudes smaller than the absolute error of the resonance frequency.</p>
+<p>结果与讨论</p>
+<p>反谐振和谐振频率分别预估为850 MHz和855 MHz。图3和4显示了对应的SAW模式。图5和6显示了电势分布特性。<br>将传感器暴露到DCM浓度为100ppm的空气中，这将导致谐振频率向下移动大约200Hz。计算方法为分别计算DCM吸收前的谐振频率以及吸收以后增加了质量的器件谐振频率。<br>注意到这些解两边划分的网格相互一致，这就意味着频移的相对误差同谐振频率本身误差类似。因此，频率的估计精度是很高的，因为其绝对误差比谐振的绝对误差要小很多。</p>
+<p>Modeling Instructions<br>建模指令</p>
+<p>From the File menu, choose New.<br>从文件menu中选择New</p>
+<p>New<br>1 In the New Window, click Model Wizard.<br>新建<br>1 在新建窗口中，选择建模向导。</p>
+<p>Model Wizard<br>1 In the Model Wizard window, click 2D.<br>2 In the Select physics tree, select Structural Mechanics &gt; Piezoelectric Devices.<br>3 Click Add.<br>4 Click Study.<br>5 In the Select study tree, select Preset Studies for Selected Physics Interface &gt; Eigenfrequency.<br>6 Click Done.<br>建模向导<br>1 在建模向导中，选择2D。<br>2 在物理树中，选择结构力学&gt;PZT器件<br>3 点击Add<br>4 点击Study<br>5 在Study树中，选择Preset Studies for Selected Physics Interface &gt; Eigenfrequency.<br>6 点击Done</p>
+<p>Definitions<br>For quicker modeling, load the parameters from a file</p>
+<p>Parameters<br>1 On the Model toolbar, click Parameters<br>2 In the Setting window for Parameters, locate the Parameters section.<br>3 Click Load from File.<br>4 Browse to the model’s Model Library folder and double-click the file saw_gas_sensor_parameters.txt</p>
+<p>定义<br>为了快速建模，从文件中导入参数</p>
+<p>参数<br>1 在Model toolbar中，点击参数Parameters<br>2 在参数设定窗口，找到Parameters section.<br>3 点击load from file<br>4 找到模型的Model Library文件夹并且双击文件saw_gas_sensor_parameters.txt文本文件。</p>
+<p>Geometry I<br>1 In the Model Builder window, under Component I (comp I) click Geometry I.<br>2 In the Setting window for Geometry, locate the Unites section.<br>3 From the Length unit list, choose um.</p>
+<p>Rectangle I(r1)<br>1 On the Geometry toobar, click Primitives and choose Rectangle.<br>2 In the setting window for Rectangle, locate the Size section.<br>3 In the Width text field, type width.<br>4 In the Hight text field, type 3<em>width+t_PIB.<br>5 Locate the Position section. In the y text field, type -3</em>width.<br>6 Click to expand the Layers section. In the table, enter the following settings:</p>
+<table>
+<thead>
+<tr>
+<th>Layer name</th>
+<th>Thickness(um)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer 1</td>
+<td>t_PIB</td>
+</tr>
+</tbody>
+</table>
+<p>7 Select the Layer on top check box.<br>8 Clear the Layers on bottom check box.<br>9 Click the Build Selected button.</p>
+<p>Rectangle 2 (r2)<br>1 On the Geometry toolar, click Primitives and choose Rectangle.<br>2 In the Setting window for Rectangle, locae the Size section.<br>3 In the Width text field, type width/4.<br>4 In the Height text field, type 0.4*t_PIB.<br>5 Locate the Position section. In the x text field, type width/8.<br>6 Click the Build Selected button.</p>
+<p>Copy I (Copy I)<br>1 On the Geometry toolbar, click Transforms and choose Copy.<br>2 Select the object r2 only.<br>3 In the setting window for Copy, locate the Displacement section.<br>4 In the x text field, type width/2.<br>4 Click the Build All Objects button.</p>
+<p>几何结构 1<br>1 在Model Builder 窗口，在Component I(comp I)选择Geometry I.<br>2 在几何的Setting 窗口,找到Unit选项。<br>3 在Length Unit列表，选择um。</p>
+<p>长方形 1(r1)<br>1 在Geometry toolbar,选择Primitives并且选择Rectangle.<br>2 在Setting窗口，找到Size选项。<br>3 在Width的文本域，写width。<br>4 在Height的文本域，写3<em>width+t_PIB。<br>5 找到Position选项，在y文本域，写-3</em>width。<br>6 点击展开Layer选项，在表中写下如下设置<br>|Layer name|Thickness(um)|<br>|———|————–|<br>|Layer 1  |t_PIB         |</p>
+<p>7 勾上Layers on top选项<br>8 清楚Layers on bottom选项<br>9 点击Build Selected按钮</p>
+<p>长方形 2(r2)<br>1 在几何工具栏，点击Primitives选择Rectangle.<br>2 在Setting窗口，找到Size选项栏<br>3 在Width文本域，写上width/4<br>4 在Height文本域，写上0.4*t_PIB<br>5 找到Position选项栏，在x文本域，写入width/8<br>6 点击Build Selected按钮</p>
+<p>复制1 (copy1)<br>1 在几何工具栏，点击Transform并选择Copy<br>2 仅仅选择对象r2<br>3 在Setting窗口，找到Displacement选项<br>4 在x文本域，写入 width/2<br>5 点击Build All Objects按钮</p>
+<p>Before creating materials, define the domains, where each physics applies.</p>
+<p>Solid mechanics (Solid)<br>1 In the Model Builder window, under Component I(comp 1)&gt; Solid Mechanics(solid) click Piezoelectric Material I.<br>2 In the Setting window for Piezoelectric Material, locate the Domain Selection section.<br>3 Click Clear Selection.<br>4 Select Domain  1 only</p>
+<p>Electrostatics (ES)<br>On the Physics toolbar, click Solid Mechanic （solid） and choose Electrostatics(es).</p>
+<p>The electrical equations are not solved in the aluminum electrodes because they are assumed to be perfect conductors compared to LiNbO3 and PIB, and hence the are considered as equipotential regions.</p>
+<p>1 In the Model Builder window, under Component I (comp 1) click Electrostatics(es).<br>2 Select Domain 1 and 2 only.</p>
+<p>Charge Conservation, Piezoelectric 1<br>1 In the Model Builder window, under Component 1（comp 1）&gt;Electrostatics(es) click Charge Conservation, Piezoelectric 1.<br>2 Select Domain 1 only.</p>
+<p>在创建材料之前，先定义域，以便于不同的物理模块。</p>
+<p>固体力学(Solid)<br>1 在Model Builder窗口，找到Component 1(comp 1)&gt;Solid Mechanics（solid），选择Piezoelectric Material 1.<br>2 在Setting窗口中，找到Domain Selection选项<br>3 点击Clear Selection<br>4 仅选择Domain 1</p>
+<p>静电学（ES）</p>
 
       
     </div>
@@ -295,8 +342,8 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 <nav id="article-nav">
   
   
-    <a href="/2016/01/20/practice/nature/code-labview/HowToLabview/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LabView编程</div>
+    <a href="/2016/01/23/HowToResearch4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">九阳神功之三：布里渊预研2</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -331,7 +378,7 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="practice/nature/research/HowToResearch5" data-title="九阳神功之五：布里渊预研SAW数值模拟" data-url="http://yoursite.com/2016/01/26/practice/nature/research/HowToResearch5/"></div>
+	<div class="ds-thread" data-thread-key="HowToResearch5" data-title="九阳神功之五：布里渊预研SAW数值模拟" data-url="http://yoursite.com/2016/01/26/HowToResearch5/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
