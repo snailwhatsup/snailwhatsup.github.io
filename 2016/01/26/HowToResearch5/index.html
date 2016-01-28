@@ -16,7 +16,7 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 <meta property="og:description" content="SAW Gas Sensor
 Introduction
 A surface acoustic wave(SAW) is an acoustic wave propagating along the surface of a solid meterial.Its amplitude decays rapidly, often exponentially, with the depth of the">
-<meta property="og:updated_time" content="2016-01-28T00:40:16.000Z">
+<meta property="og:updated_time" content="2016-01-28T01:46:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="九阳神功之五：布里渊预研SAW数值模拟">
 <meta name="twitter:description" content="SAW Gas Sensor
@@ -327,7 +327,21 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 <p>Rectangle 2 (r2)<br>1 On the Geometry toolar, click Primitives and choose Rectangle.<br>2 In the Setting window for Rectangle, locae the Size section.<br>3 In the Width text field, type width/4.<br>4 In the Height text field, type 0.4*t_PIB.<br>5 Locate the Position section. In the x text field, type width/8.<br>6 Click the Build Selected button.</p>
 <p>Copy I (Copy I)<br>1 On the Geometry toolbar, click Transforms and choose Copy.<br>2 Select the object r2 only.<br>3 In the setting window for Copy, locate the Displacement section.<br>4 In the x text field, type width/2.<br>4 Click the Build All Objects button.</p>
 <p>几何结构 1<br>1 在Model Builder 窗口，在Component I(comp I)选择Geometry I.<br>2 在几何的Setting 窗口,找到Unit选项。<br>3 在Length Unit列表，选择um。</p>
-<p>长方形 1(r1)<br>1 在Geometry toolbar,选择Primitives并且选择Rectangle.<br>2 在Setting窗口，找到Size选项。<br>3 在Width的文本域，写width。<br>4 在Height的文本域，写3<em>width+t_PIB。<br>5 找到Position选项，在y文本域，写-3</em>width。<br>6 点击展开Layer选项，在表中写下如下设置<br>|Layer name|Thickness(um)|<br>|———|————–|<br>|Layer 1  |t_PIB         |</p>
+<p>长方形 1(r1)<br>1 在Geometry toolbar,选择Primitives并且选择Rectangle.<br>2 在Setting窗口，找到Size选项。<br>3 在Width的文本域，写width。<br>4 在Height的文本域，写3<em>width+t_PIB。<br>5 找到Position选项，在y文本域，写-3</em>width。<br>6 点击展开Layer选项，在表中写下如下设置</p>
+<table>
+<thead>
+<tr>
+<th>Layer name</th>
+<th>Thickness(um)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer 1</td>
+<td>t_PIB</td>
+</tr>
+</tbody>
+</table>
 <p>7 勾上Layers on top选项<br>8 清楚Layers on bottom选项<br>9 点击Build Selected按钮</p>
 <p>长方形 2(r2)<br>1 在几何工具栏，点击Primitives选择Rectangle.<br>2 在Setting窗口，找到Size选项栏<br>3 在Width文本域，写上width/4<br>4 在Height文本域，写上0.4*t_PIB<br>5 找到Position选项栏，在x文本域，写入width/8<br>6 点击Build Selected按钮</p>
 <p>复制1 (copy1)<br>1 在几何工具栏，点击Transform并选择Copy<br>2 仅仅选择对象r2<br>3 在Setting窗口，找到Displacement选项<br>4 在x文本域，写入 width/2<br>5 点击Build All Objects按钮</p>
@@ -339,7 +353,118 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 <p>Charge Conservation, Piezoelectric 1<br>1 In the Model Builder window, under Component 1（comp 1）&gt;Electrostatics(es) click Charge Conservation, Piezoelectric 1.<br>2 Select Domain 1 only.</p>
 <p>在创建材料之前，先定义域，以便于不同的物理模块。</p>
 <p>固体力学(Solid)<br>1 在Model Builder窗口，找到Component 1(comp 1)&gt;Solid Mechanics（solid），选择Piezoelectric Material 1.<br>2 在Setting窗口中，找到Domain Selection选项<br>3 点击Clear Selection<br>4 仅选择Domain 1</p>
-<p>静电学（ES）</p>
+<p>静电学（ES）<br>在physics工具栏，点击Solid mechanics (solid)并选择Electrostatics(es)</p>
+<p>由于假设这里的铝为理想金属导体，因此并没有计算电学公式，而是设置电极为等电势区域。<br>1 在model builder窗口中，component 1(comp 1)点击静电(es)<br>2 仅选择1和2区域。</p>
+<p>电荷守恒，PZT 1<br>1 在Model Builder窗口下component 1(comp 1)&gt;Electrostatics(es)点击charge conservation, Piezoelectric 1.<br>2 仅选择区域1</p>
+<p>Materials</p>
+<p>Material 1 (mat1)<br>1 In the Model Builder window, under Component1(comp1) right-click Material and choose Blank Material.<br>2 In the Settings window for Material, type LiNbO3 in the Label text field<br>3 Locate the Geometric Entity Selection section. Click Clear Selection.<br>4 Select Domain 1 only<br>5 Locate the Material Contents section. In the table, enter the following settings:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>name</th>
+<th>Value</th>
+<th>Unit</th>
+<th>Property group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elasticity matrix</td>
+<td>cE</td>
+<td></td>
+<td>Pa</td>
+<td>Stress-charge form</td>
+</tr>
+<tr>
+<td>Coupling matrix</td>
+<td>eEs</td>
+<td></td>
+<td>C/m^2</td>
+<td>Stress-charge form</td>
+</tr>
+<tr>
+<td>Relative permittivity</td>
+<td>epsilonrS</td>
+<td></td>
+<td>I</td>
+<td>Stress-charge form</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>rho</td>
+<td></td>
+<td>kg/m^3</td>
+<td>Basic</td>
+</tr>
+</tbody>
+</table>
+<p>Material 2(mat2)<br>1 In the Model Builder window, right-click Materials and choose Blank Material.<br>2 In the settings window for Material, type PIB in the Label text field.<br>3 Select Domain 2 only.<br>4 Locate the Material Content section. In the table, enter the flollowing settings:</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Name</th>
+<th>Value</th>
+<th>Unit</th>
+<th>Property group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Young’s modulus</td>
+<td>E</td>
+<td></td>
+<td>Pa</td>
+<td>Basic</td>
+</tr>
+<tr>
+<td>Poisson’s ratio</td>
+<td>nu</td>
+<td></td>
+<td></td>
+<td>Basic</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>rho</td>
+<td></td>
+<td>kg/m^3</td>
+<td>Basic</td>
+</tr>
+<tr>
+<td>Relative permittivity</td>
+<td>epsilonr</td>
+<td></td>
+<td></td>
+<td>Basic</td>
+</tr>
+</tbody>
+</table>
+<p>Add Material<br>1 On the Model toolbar, click Add Material to open the Add Material window.<br>2 Go to the Add Material window<br>3 In the tree, select Built-In&gt;Aluminum.<br>4 Click Add to the Component in the window toobar.</p>
+<p>Materials<br>Aluminum(mat3)<br>1 In the Model Builder window, under Component 1(comp1)&gt;Materials click Aluminum(mat3)<br>2 Select Domain 3 and 4 only<br>3 On the Model toolbar, click Add Material to close the Add Material window.</p>
+<p>材料<br>材料 1（mat1）<br>1 在Model Builder窗口,Component 1(comp1)右击materials并选择Blank Material<br>2 在Setting窗口，写LiNbO3为Label文本<br>3 找到Geometric Entity Selection选项栏，点击Clear Selection.<br>4 仅选择Domain 1<br>5 在Material Content选项，写入以下设置</p>
+<p>材料2 （mat2）<br>1 在Model Builder窗口,右键Material选择Blank Material.<br>2 在Setting窗口，写PIB在label文本域<br>3 仅选择Domain2<br>4 找到Material Contents选项，在表中填写以下内容</p>
+<p>添加材料<br>1 在Model工具栏中，点击Add Material打开Add Material窗口<br>2 在Add Material窗口<br>3 在树中，选择Built-In&gt;Aluminum<br>4 在window toolbar中点击Add to Component</p>
+<p>材料<br>1 在Model Builder窗口中，Component 1(comp1)&gt;Material 点击Aluminum(mat3)<br>2 仅选择Domain 3和4。<br>3 在Model toolbar,点击Add Material 以关闭Add Material窗口</p>
+<p>Solid Mechanics (solid)<br>On the Physics toolbar, click Electrostatics(es) and choose Solid Mechanics(solid).</p>
+<p>Fixed Constraint 1<br>1 On the Physics toolbar, click Boundaries and choose Fixed Constraint.<br>2 Select Boundary 2 only.</p>
+<p>Periodic Condition 1<br>1 On the Physics toolbar, click Boundaries and choose Periodic Condition.<br>2 Select Boundaries 1,3,16 and 17 only.</p>
+<p>This defines periodic condition for the Solid Mechanics physics. By default, the periodicity type is set to continuity for all dependent variables.</p>
+<p>Electrostatics(ES)<br>Ground the left electrode by applying boundary condition on its edges.</p>
+<p>Ground 1<br>1 On the physics toolbar, click Boundaries and choose Ground.<br>2 Select Boundaries 6-9 only</p>
+<p>Apply a floating potential on the edges of the right electrode.</p>
+<p>Floating Potential 1<br>1 On the physics toolbar, click Boundaries and choose Floating Potential.<br>2 Select Boundaries 11-14 only<br>Define periodic boundary condition for the Electrostatics physics.</p>
+<p>Periodic Condition 1<br>1 On the physics toolbar, click Boundaries and choose Periodic Condition.<br>2 Select Boundaries 1,3,16 and 17 only.</p>
+<p>固体力学（solid）<br>在Physics工具栏中，点击Electrostatic(es)并且选择Solid Mechanics(solid)</p>
+<p>固定约束1<br>1 在physics工具栏，选择Boundaries并选择Fixed Constraint<br>2 仅选择边界2</p>
+<p>周期条件1<br>1 在physics工具栏，点击Boundaries并选择Periodic Condition<br>2 仅选择边界1,3,16和17.<br>这个定义了固体力学物理模块的周期条件。在默认情况下，周期类型被设置对所有的依赖变量都连续。</p>
+<p>静电学（ES）<br>通过设置边界条件将左电极设置为接地。</p>
+<p>接地1<br>1 在physics工具栏，点击Boundaries并选择Ground.<br>2 仅选择边界6-9</p>
+<p>将右边电极设置为高电平</p>
+<p>浮电势1<br>1 在physics工具栏，点击Boundaries并选择Floating Potential<br>2 选择边界11-14</p>
+<p>为静电模块定义周期边界条件</p>
+<p>周期边界条件1<br>1 在physics工具栏，点击Boundaries选择Periodic Condition<br>2 选择边界1,3,16和17</p>
 
       
     </div>
