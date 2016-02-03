@@ -16,7 +16,7 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 <meta property="og:description" content="SAW Gas Sensor
 Introduction
 A surface acoustic wave(SAW) is an acoustic wave propagating along the surface of a solid meterial.Its amplitude decays rapidly, often exponentially, with the depth of the">
-<meta property="og:updated_time" content="2016-01-28T01:46:55.000Z">
+<meta property="og:updated_time" content="2016-02-02T02:36:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="九阳神功之五：布里渊预研SAW数值模拟">
 <meta name="twitter:description" content="SAW Gas Sensor
@@ -223,7 +223,7 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
   
     <div class="article-meta">
       <a href="/2016/01/26/HowToResearch5/" class="article-date">
-  	<time datetime="2016-01-26T23:56:40.000Z" itemprop="datePublished">2016-01-26</time>
+  	<time datetime="2016-01-26T15:56:40.000Z" itemprop="datePublished">2016-01-26</time>
 </a>
     </div>
   
@@ -465,6 +465,61 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
 <p>浮电势1<br>1 在physics工具栏，点击Boundaries并选择Floating Potential<br>2 选择边界11-14</p>
 <p>为静电模块定义周期边界条件</p>
 <p>周期边界条件1<br>1 在physics工具栏，点击Boundaries选择Periodic Condition<br>2 选择边界1,3,16和17</p>
+<p>MESH 1<br>Edge 1<br>1 In the Model Builder window, under Component 1(comp 1) right-click Mesh 1 and choose More Operation&gt;edge.</p>
+<p>2 Select Boundaries 1 and 3 only.</p>
+<p>Distribution 1<br>1 Right-click Component 1(comp1)&gt;Mesh 1 &gt;Edge 1 and choose Distribution.<br>2 Select Boundary 3 only.<br>3 In the settings window for Distribution, locate the Distribution section.<br>4 In the Number of Elements text field, type 4.</p>
+<p>Edge 1<br>Define an increasing mesh size along the thickness of the piezoelectric substrate.</p>
+<p>Distribution 2<br>1 Right-click Edge 1 and choose Distribution.<br>2 Select Boundary 1 only<br>3 In the Setting window for Distribution, locate the Distribution section.<br>4 From the Distribution properties list, choose Pre defined distribution type.<br>5 In the number of elements text field, type 25.<br>6 In the Element ratio text field, type 25.<br>7 Select the Reverse direction check box<br>8 Click the Build Selected button</p>
+<p>Copy Edge 1<br>1 In the Model Builder window for Copy Edge, locate the Destination Boundaries section.<br>4 Select the Active toggle button.<br>5 Select Boundaries 16 and 17 only.</p>
+<p>划分网格</p>
+<p>Edge边界1<br>1 在Model Builder窗口下Component 1(comp 1) 右键点击 Mesh 1 并且选择More Operation &gt; Edge.<br>2 选择边界 1 和3</p>
+<p>分布1<br>1 右键点击Component 1(comp 1)&gt;Mesh 1 &gt;Edge 1 并且选择Distribution<br>2 选择Boundary 3<br>3 在Distribution的Setting 窗口，找到Distribution选项<br>4 在number of elements文本框，写4</p>
+<p>Edge边界1<br>定义并且随PZT衬底深度增加网格大小</p>
+<p>分布2<br>1 右键点击Edge 1 并且选择Distribution<br>2 选择Boundary 1<br>3 在Setting 窗口，找到Distribution选项<br>4 从Distribution properties列表，选择predefined distribution type.<br>5 在 Number of elements文本域，写25<br>6 在Element ratio 文本域，写25<br>7 选中Reverse direction<br>8 点击Build Selected按键</p>
+<p>复制边界1<br>1 在Model Builder窗口，右键点击Mesh 1 并且选择More Operation&gt;copy Edge<br>2 选择边界 1和3<br>3 在Settings窗口，找到Destinaion Boundaries 选项<br>4 选择Active按钮<br>5 选择边界16和17</p>
+<p>Free Quad 1<br>1 Right-click Mesh 1 and choose Free Quad<br>2 In the Setting window for Free Quad, locate the Domain Selection section<br>3 From the Geometric entity level list, choose Domain<br>4 Select Domain 2-4 only</p>
+<p>Size 1<br>1 Right-click Component 1(comp 1)&gt;Mesh 1&gt;Free Quad 1 and choose Size<br>2 In the Setting window for Size, locate the Element Size section<br>3 Click the Custom button<br>4 Locate the Element Size Parameters section. Select the Maximum element size check box<br>5 In the associated text field, type t_PID/4</p>
+<p>Mapped 1<br>1 In the Model Builder window, right-click Mesh 1 and choose Mapped<br>2 Right-click Mapped 1 and choose Build All</p>
+<p>自由边界Quad 1<br>1 右键点击Mesh 1并且选择Free Quad<br>2 在Setting窗口,找到Domain Selection选项<br>3 从Geometric entity level列表，选择Domain<br>4 选择域2-4</p>
+<p>尺寸1<br>1 右键点击Component 1(comp 1)&gt;Mesh 1&gt; Free Quad 1并且选择Size<br>2 在Settings 窗口，找到Element Size选项<br>3 点击Custom按键<br>4 找到Element Size Parameters选项，选择Maximum element size<br>5 在关联的文本域，写t_PIB/4</p>
+<p>Mapped 1<br>1 在Model Builder窗口，右键点击Mesh 1并且选择Mapped<br>2 右键点击Mapped 1 并且选择Build All</p>
+<p>Study 1</p>
+<p>Set up a parametric sweep to solve the model with and without the adsorbed species on the sensor. The parameter switch is used to solve the model once without adding the density of DCM and once with the added density of adsorbed DCM in PIB.</p>
+<p>研究1<br>设置参数扫描来求解包含吸附物质和未包含吸附物质的传感模型。参数开关从来求解PIB中有DCM质量和没有改物质质量的模型。</p>
+<p>Parametric Sweep<br>1 On the Study toolbar, click Parametric Sweep<br>2 In the Settings window for Parametric Sweep, locate the Study Settings section.<br>3 Click Add<br>4 In the table, enter the following settings</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Parameter value li审题</th>
+<th>Parameter unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>switch</td>
+<td>0 1</td>
+</tr>
+</tbody>
+</table>
+<p>Search for eigenfrequencies near the estimated resonance frequency.</p>
+<p>Step 1: Eigenfrequency<br>1 In the Model Builder window, under Study 1 click Step 1: Eigenfrequency.<br>2 In the Setting window for Eigenfrequency, locate the Study Settings section.<br>3 In the Search for eigenfrequencies around text field, type f0.<br>4 On the study toolbar, click Compute.</p>
+<p>参数扫描<br>1 在Study工具栏，点击Parametric Sweep<br>2 在Settings窗口，找到Study Settings 选项<br>3 点击Add<br>4 在表中，填入以下设置</p>
+<p>在预估谐振频率附近搜索本征频率<br>1 在Model Builder窗口，Study 1下点击Step 1: Eigenfrequency.<br>2 在Setting 窗口，找到Study Setting选项<br>3 在Search for eigen frequencies around文本框，写入f0<br>4 在Study选项栏，点击Compute</p>
+<p>RESULT</p>
+<p>Mode Shape(solid)<br>The default plot shows the anti-resonance SAW mode near 850 MHz. Adjust the deformed shape plot to see the effect of the wave localization near the surface.<br>1 In the Settings window for 2D plot Group, locate the Data section.<br>2 From the Parameter value(switch) list, choose 0.0000.<br>3 In the Model Builder window, expand the Mode Shape(solid) node.<br>4 In the Model Builder window, expand the Results&gt;Mode shape(solid)&gt;Surface 1 node, then click Deformation.<br>5 In the settings window for Deformation, locate the Scale section.<br>6 Select the Scale factor check box.<br>7 In the associated text field, type 100.<br>8 On the 2D plot Group toolbar, click Plot.</p>
+<p>Compare the resulting plot to that in Figure 3.</p>
+<p>结果<br>模式形状(固体力学)<br>默认的绘图显示了反谐振SAW模式在850MHz左右。旋转形状以观察波局域在表面的效果。<br>1 在2D绘图组Setting窗口，找到Data选项<br>2 从Parameter value(switch)列表，选择0.0000.<br>3 在Model Builder窗口，展开Mode shape(solid)节点<br>4 在Model Builder窗口，展开Result&gt;Mode Shape(solid)&gt;Surface 1节点，然后点击Deformation.<br>5 在Settings窗口，找到Scale选项<br>6 选中Scale factor选项<br>7 在关联的文本域中，填入100<br>8 在2D plot group工具栏中，点击Plot<br>把结果同Figure 3对比</p>
+<p>Plot the second mode shape near 855 MHz, which is the resonance SAW mode.</p>
+<p>1 In the Model Builder window, click Mode Shape(solid)<br>2 In the Settings window for 2D Plot Group, locate the Data section.<br>3 From the Eigenfrequency list, choose 8.5547E8<br>4 On the 2D plot group toolbar, click Plot.</p>
+<p>Compare the resulting plot to that in Figure 4</p>
+<p>绘出855 MHz附近的第二个模式，即SAW谐振模式<br>1 在Model Builder窗口，点击Mode Shape(solid)<br>2 在Setting窗口，找到Data选项<br>3 在Eigenfrequency列表，选择8.5547E8<br>4 在2D plot group工具栏中，点击Plot<br>将结果同Figure 4对比</p>
+<p>Electric Potential(es)<br>To visualize the electric potential distribtution for the eigenmodes, follow these steps:<br>1 In the Model Builder window, expand the Resutl&gt;Electric Potential(es) node, then click Surface 1.<br>2 In the Setting window for Surface, Locate the Coloring and Style section.<br>3 From the Color table list, choose WaveLight<br>4 Right-click Resutls&gt;Electric Potential(es)&gt;Surface 1 and choose Height Expression.<br>5 In the Setting window for 2D Plot Group, locate the Data section.<br>6 From the Parameter value(switch) list, choose 0.0000.<br>7 On the 2D plot group toolbar, click Plot.<br>8 From the Eigenfrequency list, choose 8.557E8.<br>9 On the 2D plot group toolbar, click Plot.<br>10 Click the Zoom Extents button on the Graphics toolbar.</p>
+<p>电势(es)<br>可视化本征模式的电场分布，步骤如下：<br>1 在Model Builder窗口，扩展Result&gt;Electric Potential(es)节点，然后点击Surface 1.<br>2 在Setting 窗口，找到Coloring and Style选项<br>3 从Color table列表中选择WaveLight.<br>4 右键点击Result&gt;Electric Potential(es)&gt;Surface 1 并且选择Height Expression.<br>5 在Setting窗口，找到Data选项<br>6 从Parameter Value(switch)列表中，选择0.0000<br>7 在2D plot group选项表中，点击Plot<br>8 从Eigenfrequency列表中选择8.5547E8<br>9 在2D plot group 工具栏中，点击Plot<br>10 点击Graphics工具栏中Zoom Extents按键</p>
+<p>Derived Values<br>To see all computed eigenfrequencies as a table, follow these steps:<br>1 On the Results toolbar, click Global Evaluation.<br>2 In the Settings window for Global Evaluation, locate the Data section<br>3 From the Data set list, choose Study 1/Parametric Solution 1.<br>4 From the Table columns list, choose Outer solutions.<br>5 Click Replace Expression in the upper-right corner of the Expression section. From the menu, choose Solver&gt;freq-Frequency.<br>6 Right-click Result&gt;Derived Values&gt;Global Evalution 1 and choose Evaluate&gt;New Table.</p>
+<p>原始数据：<br>想要以列表形式看到计算出来的所有本征频率，按照以下步骤：<br>1 在Results工具栏，点击Global Evaluation.<br>2 在Setting窗口，找到Data选项<br>3 从Data set列表，选择Study 1/Parametric Solution 1<br>4 从Table columns列表，选择Outer solutions<br>5 点击位于expression选项右上角的Replace expression，从目录中选择Solver&gt;freq-Frequency<br>6 右键点击Result&gt;Derived Values&gt;Global Evaluation 1并选择Evaluate&gt;New Table</p>
+<p>Table<br>1 Go to The table window<br>2 Click Full Precision in the window toolbar<br>The first 6 digits of the eigenfrequency are the same. Subtracting the new value from the previous value shows that the eigenfrequency with gas exposure is lower by 200Hz</p>
+<p>表格<br>1 到table窗口<br>2 点击Full Precision<br>本征值首6个数字是一样的，新值减去旧值显示了气体吸收后下降了200Hz</p>
 
       
     </div>
@@ -473,6 +528,15 @@ A surface acoustic wave(SAW) is an acoustic wave propagating along the surface o
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/02/02/HowToResearch6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          九阳神功之六：玩转科研
+        
+      </div>
+    </a>
   
   
     <a href="/2016/01/23/HowToResearch4/" id="article-nav-older" class="article-nav-link-wrap">
